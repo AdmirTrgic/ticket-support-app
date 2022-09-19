@@ -1,10 +1,13 @@
 {
+  "homepage": "https://github.com/AdmirTrgic/ticket-support-app",
   "name": "ticketapp",
   "version": "1.0.0",
   "description": "Support ticket app",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
